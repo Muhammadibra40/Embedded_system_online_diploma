@@ -1,0 +1,37 @@
+/*
+ ============================================================================
+ Name        : assi2_EX7.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int i,fac=1,result=1;
+	printf("enter an integer : ");
+	fflush(stdin); fflush(stdout);
+	scanf("%d",&i);
+	if (i>0)
+	{
+		for (fac =1;fac<=i;fac++)
+		{
+			result*=fac;
+		}
+		printf("factorial = %d",result);
+	}
+	else if(i==0)
+    {
+		printf("factorial = 1");
+	}
+	else
+	{
+		printf("error !!!factorial of a negative number doesn't exist ");
+	}
+
+	return EXIT_SUCCESS;
+}
