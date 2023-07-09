@@ -1,0 +1,53 @@
+/*
+ ============================================================================
+ Name        : assi2_-EX8.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	char n;
+	float num1,num2,result;
+	printf("enter operator either + or - or * or / : ");
+	fflush(stdin); fflush(stdout);
+	scanf("%c",&n);
+	printf("enter two operands : ");
+	fflush(stdin); fflush(stdout);
+	scanf("%f %f",&num1,&num2);
+	switch (n)
+	{
+	case ('+'):
+		{
+		result = num1+num2;
+		printf("%.1f + %.1f= %.1f",num1,num2,result);
+		break;
+		}
+	case ('-'):
+		{
+		result = num1-num2;
+		printf("%.1f - %.1f = %.1f",num1,num2,result);
+		break;
+	    }
+	case ('*'):
+		{
+		result = num1*num2;
+		printf("%.1f * %.1f = %.1f",num1,num2,result);
+		break;
+		}
+	case ('/'):
+		{
+		result = num1/num2;
+		printf("%.1f / %.1f = %.1f",num1,num2,result);
+		break;
+		}
+	}
+
+	return EXIT_SUCCESS;
+}
+
