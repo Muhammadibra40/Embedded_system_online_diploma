@@ -15,27 +15,31 @@ int fac(int a);
 
 int main(void) {
 
-	int x,t;
+	int x;
 
 	printf("Enter the number to get its factorial: ");
 	fflush(stdin);  fflush(stdout);
 	scanf("%d",&x);
 
-	t = fac(x);
 
-	printf("The factorial of %d = %d",x,t);
+
+	printf("The factorial of %d = %d",x,fac(x));
 
 	return EXIT_SUCCESS;
 }
 
 int fac(int a)
 {
-	int result = 1;
-	while(a>0)
+	if(a == 0)
 	{
-		result *= a;
-		a--;
-		fac(a);
+		return 0;
 	}
-	return result;
+	else if(a == 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return a*fac(a-1);
+	}
 }
